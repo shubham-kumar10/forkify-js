@@ -1,5 +1,15 @@
 // Global app controller
-import string from '../model/Search';
-import { add, str } from '../view/searchView'
 
-console.log(string + add(2, 3) + str + "bab");
+import axios from 'axios';
+
+async function getResults(query) {
+    try {
+        const result = await axios(`https://forkify-api.herokuapp.com/api/search?&q=${query}`);
+        console.log(result);
+    }
+    catch (error) {
+        alert(error);
+    }
+}
+
+getResults();
