@@ -1,3 +1,5 @@
 // Global app controller
-const i = 23;
-console.log("Hello" + i);
+import string from '../model/Search';
+import { add, str } from '../view/searchView'
+
+console.log(string + add(2, 3) + str + "bab");
